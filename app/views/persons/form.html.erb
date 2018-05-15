@@ -1,0 +1,28 @@
+<h1>Add New Person</h1>
+<%= form_for :post do |f| %>
+  <p>I want to add: <br>
+    <%= f.select :role, options_for_select([["Actor", Actor], ["Director", Director]]) %>
+  </p>
+
+  <p>First Name<br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>Last Name<br>
+    <%= f.text_field :title %>
+  </p>
+  <p>Birth Date<br>
+    <%= f.date_select(:date, :order => [:month, :day, :year]) %>
+  </p>
+
+
+  <p>Description<br>
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+
